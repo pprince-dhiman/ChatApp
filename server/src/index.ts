@@ -23,6 +23,7 @@ wss.on("connection", (socket) => {
     if (parsedMsg.type === "join") {
       console.log("Room joined: " + parsedMsg.payload.roomId);
       allSocket.push({ socket: socket, room: parsedMsg.payload.roomId });
+      console.log(allSocket);
     }
 
     if (parsedMsg.type === "chat") {
