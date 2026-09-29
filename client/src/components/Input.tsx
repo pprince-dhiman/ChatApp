@@ -4,9 +4,10 @@ interface InputProps {
   placeholder: string;
   onChange: (e:React.ChangeEvent<HTMLInputElement>) => void;
   value: string | number;
+  min?: number;
 }
 
-const Input = ({ placeholder, value, onChange }: InputProps) => {
+const Input = ({ placeholder, value, onChange, min }: InputProps) => {
   return (
     <div>
       <input
@@ -14,6 +15,7 @@ const Input = ({ placeholder, value, onChange }: InputProps) => {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        min={min}
       />
     </div>
   );
